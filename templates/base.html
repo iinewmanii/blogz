@@ -1,25 +1,82 @@
 <!doctype html>
-<html>
-    <head>
-        <title>{{website}}</title>
-        <style type="text/css">
-            .error{
-                color: red;
-            }
-            h1 {
-                text-align: center;
-                font-size: 48px;
-            }
-        </style>
-    </head>
+<html style="margin-left:15%; margin-right:15%;">
+
+<head>
+    <title>{{website}}</title>
+    <style type="text/css">
+        .error {
+            color: red;
+        }
+
+        h1 {
+            color: cornflowerblue;
+            text-align: start;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 56px;
+        }
+
+        a {
+            color: cornflowerblue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: aqua;
+        }
+
+        .topnav {
+            display: block;
+            font-size: 24px;
+        }
+
+        .topnav a {
+            color: cornflowerblue;
+            margin-right: 8px;
+        }
+
+        .topnav a:hover {
+            color: aqua;
+        }
+
+        form {
+            display: table;
+            width: 60%;
+        }
+
+        label {
+            display: table-cell;
+            font-size: 24px;
+            margin-right: 4px;
+        }
+
+        input {
+            display: table-cell;
+        }
+    </style>
+</head>
+
 <body>
-    <div>
-        <a style="font-size:20px; margin-left:8px; margin-right:8px;" href="/">Main Blog Page</a>
-        <a style="font-size:20px; margin-left:8px; margin-right:8px;" href="/newpost">Add A Blog Entry</a>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/blog">All Posts</a>
+        <a href="/newpost">New Post</a>
+        <a href="/logout" style="float:right;">Logout</a>
+        <a href="/login" style="float:right;">Login</a>
     </div>
 
-    {% block content %}
+    <h1>{{heading}}</h1>
+
+    {% block content %} 
     {% endblock %}
 
+    {% with messages = get_flashed_messages() %}
+    <ul>
+        {% for message in messages %}
+        <li class="error">{{message}}</li>
+        {% endfor %}
+    </ul>
+    {% endwith %}
+
 </body>
+
 </html>
