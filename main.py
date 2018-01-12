@@ -1,5 +1,4 @@
-import cgi
-from flask import Flask, redirect, request, session, flash, render_template, url_for, escape
+from flask import Flask, redirect, request, session, flash, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
 
