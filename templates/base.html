@@ -1,22 +1,30 @@
 <!doctype html>
-<html style="margin-left:15%; margin-right:15%;">
+<html>
 
 <head>
     <title>{{website}}</title>
     <style type="text/css">
+        html {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
         .error {
             color: red;
         }
 
         h1 {
-            color: cornflowerblue;
+            color: hsl(199, 100%, 45%);
             text-align: start;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 56px;
+            margin-top: 5%;
+        }
+        body {
+            background-color:hsl(199, 100%, 98%);
         }
 
         a {
-            color: cornflowerblue;
+            color: hsl(199, 100%, 45%);
             text-decoration: none;
         }
 
@@ -26,12 +34,18 @@
 
         .topnav {
             display: block;
-            font-size: 24px;
+            font-size: 30px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            background-color:hsl(199, 100%, 93%);
+            width: 80%;
+            height: 5%;
         }
 
         .topnav a {
-            color: cornflowerblue;
-            margin-right: 8px;
+            color: hsl(199, 100%, 45%);
+            margin-right: 16px;
         }
 
         .topnav a:hover {
@@ -46,7 +60,6 @@
         label {
             display: table-cell;
             font-size: 24px;
-            margin-right: 4px;
         }
 
         input {
@@ -57,9 +70,9 @@
 
 <body>
     <div class="topnav">
-        <a href="/">Home</a>
-        <a href="/blog">All Posts</a>
-        <a href="/newpost">New Post</a>
+        <a href="/" style="float:left; margin-left:16px;">Home</a>
+        <a href="/blog" style="float:left;">All Posts</a>
+        <a href="/newpost" style="float:left;">New Post</a>
         <a href="/logout" style="float:right;">Logout</a>
         <a href="/login" style="float:right;">Login</a>
     </div>
